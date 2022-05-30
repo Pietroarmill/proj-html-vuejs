@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <AppHeader :ElementTop="this.headerTopArray"/>
+    <AppHeader :ElementTop="this.headerTopArray" :ElementBottom="this.headerBottomArray"/>
     <AppMain />
     <AppFooter />
   </div>
@@ -21,7 +21,36 @@ export default {
   data() {
     return {
       headerTopArray: ['sign in', 'about us', 'contact us', 'buy now'],
-      headerBottomArray: ['home', 'elements', 'features', 'pages', 'portfolio', 'blog', 'shop']
+      headerBottomArray: [
+        {
+          name: "home",
+          active: true
+        },
+        {
+          name: "elements",
+          active: false
+        },
+        {
+          name: "features",
+          active: false
+        },
+        {
+          name: "pages",
+          active: false
+        },
+        {
+          name: "portfolio",
+          active: false
+        },
+        {
+          name: "blog",
+          active: false
+        },
+        {
+          name: "shop",
+          active: false
+        },
+      ]
     }
   }
 }
