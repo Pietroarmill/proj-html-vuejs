@@ -36,6 +36,11 @@ a {
   color: #0088CC;
 }
 
+.page-active {
+  color: white;
+  background-color: #0088CC;
+}
+
 .with-overlay::before {
   content: "";
   position: absolute;

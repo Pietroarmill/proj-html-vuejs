@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <AppHeader :ElementTop="this.headerTopArray" :ElementBottom="this.headerBottomArray" />
-    <AppMain :BlogsArray="this.blogs" :PopPosts="this.popularPost" :RecentPost="this.recentPost" :btnRowBlue="this.btnRowBlue" />
+    <AppMain
+      :BlogsArray="this.blogs"
+      :PopPosts="this.popularPost"
+      :RecentPost="this.recentPost"
+      :btnRowBlue="this.btnRowBlue"
+      :HomePosts="this.homePosts"
+    />
     <AppFooter />
   </div>
 </template>
@@ -144,6 +150,48 @@ export default {
         },
       ],
       btnRowBlue: ["gadgets", "photography", "lifestyle", "fashion", "recipes", "travel"],
+      homePosts: [
+        {
+          img: '-54',
+          day: '12',
+          month: 'jan',
+          title: 'How to Make Friends as a Grown-Up',
+          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore a nostrum, natus, architecto iusto magni officiis dicta magnam quo expedita minima ea fuga reprehenderit molestiae distinctio ex ipsum voluptatem consectetur.',
+          author: 'Jhon Doe',
+          type: 'Lifestyle, Travel',
+          comments: 12,
+        },
+        {
+          img: '-55 (1)',
+          day: '17',
+          month: 'apr',
+          title: 'Simple Ways to Have a Pretty Face',
+          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore a nostrum, natus, architecto iusto magni officiis dicta magnam quo expedita minima ea fuga reprehenderit molestiae distinctio ex ipsum voluptatem consectetur.',
+          author: 'Jhon Doe',
+          type: 'Lifestyle, Travel',
+          comments: 20,
+        },
+        {
+          img: '-56 (1)',
+          day: '24',
+          month: 'feb',
+          title: 'Ranking the greatest players in basketball',
+          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore a nostrum, natus, architecto iusto magni officiis dicta magnam quo expedita minima ea fuga reprehenderit molestiae distinctio ex ipsum voluptatem consectetur.',
+          author: 'Jhon Doe',
+          type: 'Lifestyle, Travel',
+          comments: 17,
+        },
+        {
+          img: '-58 (1)',
+          day: '12',
+          month: 'jan',
+          title: 'Top Camper Trailer Towing Tips',
+          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore a nostrum, natus, architecto iusto magni officiis dicta magnam quo expedita minima ea fuga reprehenderit molestiae distinctio ex ipsum voluptatem consectetur.',
+          author: 'Jhon Doe',
+          type: 'Lifestyle, Travel',
+          comments: 15,
+        },
+      ],
     }
   }
 }
