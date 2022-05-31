@@ -370,25 +370,31 @@ export default {
       padding-left: 2rem;
 
       h5 {
-        font-size: .5rem;
+        font-size: .8rem;
         font-weight: 900;
         margin: 0 0 1rem 0;
       }
 
       .twitter {
+        .twitter-content {
+          margin-bottom: 1rem;
 
-        .left {
-          padding-right: .6rem;
-          font-size: .5rem;
-        }
-        .right {
-          color: #888888;
-          font-size: .5rem;
-          p {
-            margin-bottom: .5rem;
+          .left {
+            padding-right: .6rem;
+            font-size: .9rem;
           }
-          a {
-            color: $brand-blog-color;
+
+          .right {
+            color: #888888;
+            font-size: .8rem;
+
+            p {
+              margin-bottom: .5rem;
+            }
+
+            a {
+              color: $brand-blog-color;
+            }
           }
         }
       }
@@ -396,8 +402,41 @@ export default {
       .insta {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 1rem;
+
         img {
           width: calc(100% / 3);
+        }
+      }
+
+      .tags {
+        margin-bottom: 6rem; 
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          li {
+            text-transform: uppercase;
+            font-size: .6rem;
+            font-weight: 900;
+            background-color: black;
+            color: white;
+            padding: .1rem .4rem;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .facebook {
+        
+        span {
+          padding: 1rem;
+          border-left: 6px solid #EEEEEE;
+
+          a {
+            color: $brand-blog-color;
+          }
         }
       }
     }
