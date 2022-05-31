@@ -31,7 +31,7 @@
         <div class="col popular--+posts">
           <h5>POPULAR POSTS</h5>
           <ul>
-            <AppPost v-for="(post, index) in PopPosts" :key="index" :postObj="post" />
+            <AppSmallPost v-for="(post, index) in PopPosts" :key="index" :postObj="post" />
           </ul>
         </div>
         <!-- /Popular Posts  -->
@@ -40,7 +40,7 @@
         <div class="col recent-posts">
           <h5>RECENT POSTS</h5>
           <ul>
-            <AppPost v-for="(post, index) in RecentPost" :key="index" :postObj="post" />
+            <AppSmallPost v-for="(post, index) in RecentPost" :key="index" :postObj="post" />
           </ul>
         </div>
         <!-- /Recent Posts  -->
@@ -66,7 +66,8 @@
             </div>
             <div class="text-author">
               <h4>Jhon Doe</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid delectus at nam porro, impedit voluptatem quibusdam optio nulla.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid delectus at nam porro, impedit
+                voluptatem quibusdam optio nulla.</p>
             </div>
           </div>
         </div>
@@ -76,21 +77,39 @@
     </section>
     <!-- /Main Post Section -->
 
+    <!-- Row Blue -->
+    <AppRowBlue :btnArray="btnRowBlue" />
+    <!-- /Row Blue -->
+
+    <section class="main-home-posts">
+      <div class="container d-flex">
+        <div class="posts-box">
+          <AppPost />
+        </div>
+        <div class="other-post">destra</div>
+      </div>
+    </section>
+
   </main>
   <!-- /MAIN -->
 </template>
 
 <script>
-import AppPost from '../components/AppPost.vue'
+import AppSmallPost from '../components/AppSmallPost.vue'
+import AppRowBlue from '../components/AppRowBlue.vue'
+import AppPost from '../components/AppPost.vue';
 export default {
   name: "AppMain",
   props: {
     BlogsArray: Array,
     PopPosts: Array,
     RecentPost: Array,
+    btnRowBlue: Array,
   },
   components: {
-    AppPost
+    AppSmallPost,
+    AppRowBlue,
+    AppPost,
   }
 }
 </script>
@@ -155,6 +174,11 @@ export default {
   &-posts-section {
     padding: 3rem 0;
 
+    h5 {
+      font-size: .7rem;
+      font-weight: 900;
+    }
+
     .container {
       display: flex;
       justify-content: space-between;
@@ -178,13 +202,14 @@ export default {
           bottom: 1rem;
 
           span {
-            padding: .3rem .6rem;
+            padding: .2rem .3rem;
             background-color: $brand-blog-color;
-            font-size: .5rem;
+            font-size: .4rem;
           }
 
           h2 {
-            font-size: 1rem;
+            margin-top: .5rem;
+            font-size: .8rem;
             font-weight: 800;
           }
         }
@@ -205,7 +230,7 @@ export default {
           h4 {
             margin-bottom: .5rem;
           }
-          
+
           p {
             color: #888888;
             font-size: .8rem;
@@ -213,6 +238,16 @@ export default {
           }
         }
       }
+    }
+  }
+
+  &-home-posts {
+
+    .posts-box {
+      width: 75%;
+    }
+    .other-post {
+      width: 25%;
     }
   }
 }

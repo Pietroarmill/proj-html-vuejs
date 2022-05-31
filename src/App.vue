@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <AppHeader :ElementTop="this.headerTopArray" :ElementBottom="this.headerBottomArray" />
-    <AppMain :BlogsArray="this.blogs" :PopPosts="this.popularPost" :RecentPost="this.recentPost" />
+    <AppMain :BlogsArray="this.blogs" :PopPosts="this.popularPost" :RecentPost="this.recentPost" :btnRowBlue="this.btnRowBlue" />
     <AppFooter />
   </div>
 </template>
@@ -143,6 +143,7 @@ export default {
           date: "January 12, 2019"
         },
       ],
+      btnRowBlue: ["gadgets", "photography", "lifestyle", "fashion", "recipes", "travel"],
     }
   }
 }
