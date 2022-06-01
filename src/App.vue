@@ -8,7 +8,7 @@
       :btnRowBlue="this.btnRowBlue"
       :HomePosts="this.homePosts"
     />
-    <AppFooter />
+    <AppFooter :Tags="this.footerTags" />
   </div>
 </template>
 
@@ -192,6 +192,7 @@ export default {
           comments: 15,
         },
       ],
+      footerTags: ["gadgets", "photography", "lifestyle", "fashion", "recipes", "travel", "business", "architecture", "reviews", "sport", "videos", "technology", "design"],
     }
   }
 }

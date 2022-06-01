@@ -211,6 +211,7 @@ export default {
 
 .main {
   width: 100%;
+  padding-bottom: 4rem;
 
   // BLOGS SECTION
   &-blogs-section {
@@ -361,6 +362,7 @@ export default {
           padding: .5rem .7rem;
           display: flex;
           align-items: center;
+          cursor: pointer;
         }
       }
     }
